@@ -16,6 +16,8 @@ class ExamSys:
             x = int(input('重新输入功能编号：'))
         if x == 1:
             self.find_student()
+        if x == 2:
+            self.random_roll_call()
         return
 
     #学生信息初始化
@@ -49,4 +51,29 @@ class ExamSys:
                 print(f"找到学生：\n姓名   性别  班级   学号	    学院\n{stu.name}   {stu.gender}    {stu.clazz}     {stu.id}    {stu.department}  ")
                 return
         print("未找到该学号对应的学生，请检查输入是否正确。")
+
+    #随机点名
+    def random_roll_call(self):
+        try:
+            n = int(input("请输入点名人数："))
+            total = len(self.students)
+            #数字问题的处理
+            if n <= 0:
+                print("错误：点名人数必须大于 0！")
+                self.random_roll_call()
+            if n > total:
+                print(f"错误：超过了总人数！")
+                self.random_roll_call()
+
+            selected = random.sample(self.students, n)
+            print("本次随机点名结果：")
+            i=0
+            for stu in selected:
+                i+=1
+                print(f"{i}.{stu.name} {stu.id}")
+        #处理非数字问题
+        except ValueError:
+            print("错误：请输入有效数字！")
+            self.random_roll_call()
+
 

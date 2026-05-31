@@ -1,3 +1,4 @@
+#主程序
 import system
 
 if __name__ == "__main__":
