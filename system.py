@@ -91,7 +91,7 @@ class ExamSys:
         print("成功生成考场安排表！")
 
     #打印准考证号
-    def generate_admission_tickets(self ):
+    def generate_admission_tickets(self):
         os.makedirs("准考证", exist_ok=True)
         shuffled = random.sample(self.students, len(self.students))
         i=0
