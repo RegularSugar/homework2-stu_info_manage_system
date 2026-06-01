@@ -75,6 +75,7 @@ class ExamSys:
             for stu in selected:
                 i += 1
                 print(f"{i}.{stu.name} {stu.id}")
+            return
         #处理非数字问题
         except ValueError:
             print("错误：请输入有效数字！")
