@@ -1,5 +1,4 @@
 from student import Student
-import os
 import random
 
 
@@ -14,10 +13,12 @@ class ExamSys:
         if x not in [1, 2, 3, 4, 0]:
             print("功能编号不存在，请正确输入功能编号（0~4）：")
             x = int(input('重新输入功能编号：'))
-        if x == 1:
+        elif x == 1:
             self.find_student()
-        if x == 2:
+        elif x == 2:
             self.random_roll_call()
+        elif x == 3:
+            self.generate_exam_arrangement()
         return
 
     #学生信息初始化
@@ -38,7 +39,7 @@ class ExamSys:
                     clazz = parts[3].strip()
                     id = parts[4].strip()
                     department = parts[5].strip()
-                    students.append(Student(name, gender,clazz,id,department))
+                    students.append(Student(name, gender, clazz, id, department))
         except FileNotFoundError:
             print("未找到学生名单文件！")
         return students
@@ -69,11 +70,19 @@ class ExamSys:
             print("本次随机点名结果：")
             i=0
             for stu in selected:
-                i+=1
+                i += 1
                 print(f"{i}.{stu.name} {stu.id}")
         #处理非数字问题
         except ValueError:
             print("错误：请输入有效数字！")
             self.random_roll_call()
 
-
+    #生成考场安排表
+    def generate_exam_arrangement(self):
+        shuffled = random.sample(self.students,len(self.students))
+        with open("考场安排表.txt", "w", encoding="utf-8") as f:
+            i=0
+            for stu in shuffled:
+                i += 1
+                f.write(f'{i},{stu.name},{stu.id}\n')
+        print("成功生成考场安排表！")
