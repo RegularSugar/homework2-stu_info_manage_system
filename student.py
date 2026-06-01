@@ -1,5 +1,5 @@
 #建立Student类
-class Student():
+class Student:
     def __init__(self,name,gender,clazz,id,department):
         self.name=name
         self.gender = gender

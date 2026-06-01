@@ -103,4 +103,4 @@ class ExamSys:
                 f.write(f"姓名:{stu.name}\n")
                 f.write(f"学号:{stu.id}\n")
 
-        print("已生成\"准考证\'文件夹及所有准考证文件\n")
+        print("已生成\"准考证\"文件夹及所有准考证文件\n")
