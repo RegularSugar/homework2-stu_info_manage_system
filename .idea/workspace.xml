@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6357c205-f1f6-4d6d-9f8e-941fea09411a" name="更改" comment="add generate_exam_arrangement()&#10;improve run()">
+    <list default="true" id="6357c205-f1f6-4d6d-9f8e-941fea09411a" name="更改" comment="根据IDE的错误检查做了一些修改">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system.py" beforeDir="false" afterPath="$PROJECT_DIR$/system.py" afterDir="false" />
     </list>
@@ -85,7 +85,8 @@
       <workItem from="1780145711192" duration="394000" />
       <workItem from="1780230092886" duration="365000" />
       <workItem from="1780230467268" duration="6588000" />
-      <workItem from="1780276103776" duration="1232000" />
+      <workItem from="1780276103776" duration="1545000" />
+      <workItem from="1780289701836" duration="904000" />
     </task>
     <task id="LOCAL-00001" summary=" Add README.md which remains in the default format">
       <option name="closed" value="true" />
@@ -135,7 +136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780277065643</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="根据IDE的错误检查做了一些修改">
+      <option name="closed" value="true" />
+      <created>1780277571918</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1780277571918</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -159,7 +168,8 @@
     <MESSAGE value="add random_roll_call()&#10;improve run()" />
     <MESSAGE value="add 人工智能编程语言学生名单.txt" />
     <MESSAGE value="add generate_exam_arrangement()&#10;improve run()" />
-    <option name="LAST_COMMIT_MESSAGE" value="add generate_exam_arrangement()&#10;improve run()" />
+    <MESSAGE value="根据IDE的错误检查做了一些修改" />
+    <option name="LAST_COMMIT_MESSAGE" value="根据IDE的错误检查做了一些修改" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/homework2$system.coverage" NAME="system 覆盖结果" MODIFIED="1780237196913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />

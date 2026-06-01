@@ -1,6 +1,6 @@
 from student import Student
 import random
-
+import os
 
 class ExamSys:
     def __init__(self):
@@ -19,6 +19,8 @@ class ExamSys:
             self.random_roll_call()
         elif x == 3:
             self.generate_exam_arrangement()
+        elif x == 4:
+            self.generate_admission_tickets()
         return
 
     #学生信息初始化
@@ -87,3 +89,18 @@ class ExamSys:
                 i += 1
                 f.write(f'{i},{stu.name},{stu.id}\n')
         print("成功生成考场安排表！")
+
+    #打印准考证号
+    def generate_admission_tickets(self ):
+        os.makedirs("准考证", exist_ok=True)
+        shuffled = random.sample(self.students, len(self.students))
+        i=0
+        for stu in shuffled:
+            i += 1
+            file_name = f"准考证/{i:0>2d}.txt"
+            with open(file_name, "w", encoding="utf-8") as f:
+                f.write(f"考场座位号:{i}\n")
+                f.write(f"姓名:{stu.name}\n")
+                f.write(f"学号:{stu.id}\n")
+
+        print("已生成\"准考证\'文件夹及所有准考证文件\n")
