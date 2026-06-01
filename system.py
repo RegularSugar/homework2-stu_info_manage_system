@@ -50,7 +50,7 @@ class ExamSys:
     # 信息查找和定位(按学号查询)
     def find_student(self):
         stu_id = input("请输入学号：").strip()
-        for stu in self.students:
+        for stu in self.students:#按学号依次查找学生
             if stu.id == stu_id:
                 print(f"找到学生：\n姓名   性别  班级   学号	    学院\n{stu.name}   {stu.gender}    {stu.clazz}     {stu.id}    {stu.department}  ")
                 return
@@ -65,17 +65,17 @@ class ExamSys:
             if n <= 0:
                 print("错误：点名人数必须大于 0！")
                 self.random_roll_call()
-            if n > total:
+            elif n > total:
                 print(f"错误：超过了总人数！")
                 self.random_roll_call()
-
-            selected = random.sample(self.students, n)
-            print("本次随机点名结果：")
-            i=0
-            for stu in selected:
-                i += 1
-                print(f"{i}.{stu.name} {stu.id}")
-            return
+            #合法输入
+            else:
+                selected = random.sample(self.students, n)#按前面输入的人数随机抽人
+                print("本次随机点名结果：")
+                i = 0
+                for stu in selected:
+                    i += 1
+                    print(f"{i}.{stu.name} {stu.id}")
         #处理非数字问题
         except ValueError:
             print("错误：请输入有效数字！")
@@ -83,7 +83,7 @@ class ExamSys:
 
     #生成考场安排表
     def generate_exam_arrangement(self):
-        shuffled = random.sample(self.students,len(self.students))
+        shuffled = random.sample(self.students,len(self.students))#随机打乱安排座位
         with open("考场安排表.txt", "w", encoding="utf-8") as f:
             i = 0
             for stu in shuffled:
@@ -93,13 +93,13 @@ class ExamSys:
 
     #打印准考证号
     def generate_admission_tickets(self):
-        os.makedirs("准考证", exist_ok=True)
+        os.makedirs("准考证", exist_ok=True) #已存在文件夹则跳过
         shuffled = random.sample(self.students, len(self.students))
         i=0
         for stu in shuffled:
             i += 1
             file_name = f"准考证/{i:0>2d}.txt"
-            with open(file_name, "w", encoding="utf-8") as f:
+            with open(file_name, "w", encoding="utf-8") as f:#写入 或者覆写（如果已经存在）
                 f.write(f"考场座位号:{i}\n")
                 f.write(f"姓名:{stu.name}\n")
                 f.write(f"学号:{stu.id}\n")
