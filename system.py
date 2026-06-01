@@ -84,7 +84,7 @@ class ExamSys:
     def generate_exam_arrangement(self):
         shuffled = random.sample(self.students,len(self.students))
         with open("考场安排表.txt", "w", encoding="utf-8") as f:
-            i=0
+            i = 0
             for stu in shuffled:
                 i += 1
                 f.write(f'{i},{stu.name},{stu.id}\n')

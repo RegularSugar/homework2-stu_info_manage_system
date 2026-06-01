@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6357c205-f1f6-4d6d-9f8e-941fea09411a" name="更改" comment="add enerate_admission_tickets()&#10;improve run()">
+    <list default="true" id="6357c205-f1f6-4d6d-9f8e-941fea09411a" name="更改" comment="更新了README.md">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/system.py" beforeDir="false" afterPath="$PROJECT_DIR$/system.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -88,6 +89,8 @@
       <workItem from="1780276103776" duration="1545000" />
       <workItem from="1780289701836" duration="1610000" />
       <workItem from="1780291338875" duration="83000" />
+      <workItem from="1780302693221" duration="212000" />
+      <workItem from="1780310682677" duration="2556000" />
     </task>
     <task id="LOCAL-00001" summary=" Add README.md which remains in the default format">
       <option name="closed" value="true" />
@@ -153,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1780290877413</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="更新了README.md">
+      <option name="closed" value="true" />
+      <created>1780302880465</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1780302880465</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -179,10 +190,11 @@
     <MESSAGE value="add generate_exam_arrangement()&#10;improve run()" />
     <MESSAGE value="根据IDE的错误检查做了一些修改" />
     <MESSAGE value="add enerate_admission_tickets()&#10;improve run()" />
-    <option name="LAST_COMMIT_MESSAGE" value="add enerate_admission_tickets()&#10;improve run()" />
+    <MESSAGE value="更新了README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新了README.md" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/homework2$system.coverage" NAME="system 覆盖结果" MODIFIED="1780237196913" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/homework2$main.coverage" NAME="main 覆盖结果" MODIFIED="1780290771226" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/homework2$main.coverage" NAME="main 覆盖结果" MODIFIED="1780312937502" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
