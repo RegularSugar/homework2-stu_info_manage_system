@@ -10,10 +10,10 @@ class ExamSys:
     def run(self):
         welcome_message = '===== 学生信息与考场管理系统 ===== \n 1. 查询学生信息\n 2. 随机点名\n 3. 生成考场安排表\n 4. 生成准考证文件\n+--------------------------------------------------------------------------\n 0. 退出系统\n 输入功能编号：'
         x = int(input(welcome_message))
-        if x not in [1, 2, 3, 4, 0]:
+        while x not in [1, 2, 3, 4, 0] :
             print("功能编号不存在，请正确输入功能编号（0~4）：")
             x = int(input('重新输入功能编号：'))
-        elif x == 1:
+        if x == 1:
             self.find_student()
         elif x == 2:
             self.random_roll_call()
@@ -22,7 +22,8 @@ class ExamSys:
         return
 
     #学生信息初始化
-    def load_students(self):
+    @staticmethod
+    def load_students():
         students = []
         try:
             with open("人工智能编程语言学生名单.txt", "r", encoding="utf-8") as f:
@@ -37,9 +38,9 @@ class ExamSys:
                     name = parts[1].strip()
                     gender = parts[2].strip()
                     clazz = parts[3].strip()
-                    id = parts[4].strip()
+                    id1 = parts[4].strip()
                     department = parts[5].strip()
-                    students.append(Student(name, gender, clazz, id, department))
+                    students.append(Student(name, gender, clazz, id1, department))
         except FileNotFoundError:
             print("未找到学生名单文件！")
         return students
